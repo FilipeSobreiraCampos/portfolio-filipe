@@ -1,22 +1,26 @@
-// src/components/HeroSection.jsx
+import { Grid, Typography, Box } from '@mui/material';
 import styled from 'styled-components';
-import { Typography } from '@mui/material';
 
-const HeroContainer = styled.section`
-  background-color: #f5f5f5;
-  padding: 4rem 2rem;
+const HeroWrapper = styled(Box)`
+  padding: 6rem 2rem;
   text-align: center;
+  background-color: #f5f5f5;
+  scroll-margin-top: 80px; /* para header fixo */
 `;
 
-export function HeroSection() {
+export default function HeroSection() {
   return (
-    <HeroContainer>
-      <Typography variant="h3" gutterBottom>
-        Olá! Eu sou o Filipe
-      </Typography>
-      <Typography variant="h6" color="text.secondary">
-        Desenvolvedor em formação | Suporte Técnico | Cloud & Linux Enthusiast
-      </Typography>
-    </HeroContainer>
+    <HeroWrapper id="hero">
+      <Grid container justifyContent="center">
+        <Grid item xs={12} md={8}>
+          <Typography variant="h2" gutterBottom>
+            Olá, eu sou o Filipe Sobreira
+          </Typography>
+          <Typography variant="h5" color="text.secondary">
+            Desenvolvedor Front-end & Entusiasta de Tecnologia
+          </Typography>
+        </Grid>
+      </Grid>
+    </HeroWrapper>
   );
 }

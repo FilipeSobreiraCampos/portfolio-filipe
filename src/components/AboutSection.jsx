@@ -1,22 +1,26 @@
-// src/components/AboutSection.jsx
+import { Grid, Typography, Box } from '@mui/material';
 import styled from 'styled-components';
-import { Typography } from '@mui/material';
 
-const AboutContainer = styled.section`
-  padding: 3rem 2rem;
-  max-width: 800px;
-  margin: 0 auto;
+const AboutWrapper = styled(Box)`
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  scroll-margin-top: 80px;
 `;
 
 export function AboutSection() {
   return (
-    <AboutContainer id="about">
-      <Typography variant="h4" gutterBottom>
-        Sobre Mim
-      </Typography>
-      <Typography variant="body1" color="text.secondary">
-        Sou um entusiasta da tecnologia em constante aprendizado. Atualmente estudo Desenvolvimento, Linux, Cloud Computing e Suporte Técnico. Este portfólio tem como objetivo apresentar meus projetos, estudos e minha evolução como profissional.
-      </Typography>
-    </AboutContainer>
+    <AboutWrapper id="about">
+      <Grid container justifyContent="center">
+        <Grid item xs={12} md={8}>
+          <Typography variant="h4" gutterBottom>
+            Sobre mim
+          </Typography>
+          <Typography variant="body1" color="text.secondary">
+            Sou um desenvolvedor front-end apaixonado por criar interfaces bonitas e funcionais.
+            Tenho experiência com React, Material-UI, styled-components e outras tecnologias.
+          </Typography>
+        </Grid>
+      </Grid>
+    </AboutWrapper>
   );
 }
